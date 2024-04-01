@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Sign In as Pet Parent</title>
+    <style>
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('group_pet_photo.jpg'); /* Path to your group pet photo */
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(5px); /* Blur the background */
+    }
+
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+         header h1 {
+            margin-bottom: 10px;
+            color: rgba(13, 14, 13, 0.981); /* Change title color to white */
+            font-family: 'Times New Roman', Times, serif;
+        } 
+
+        main {
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: #333;
+        }
+        img.logo {
+            width: 100px; /* Adjust the size as needed */
+            border-radius: 250%; /* Make it circular */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="paws_logo.jpg" alt="Paws Connect Logo" class="logo">
+    <h1>Sign In as Pet Parent</h1>
+</header>
+
+<main>
+    <form action="login_process.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+
+        <button type="submit">Sign In</button>
+    </form>
+    <a href="sign_up.html">New User? Sign Up Here</a> <!-- Add a link to sign_up.html -->
+</main>
+
+<footer>
+    <p>&copy; 2024 Paws Connect</p>
+</footer>
+
+</body>
+</html>
