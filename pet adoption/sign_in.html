@@ -33,6 +33,14 @@
             color: #fff;
             cursor: pointer;
         }
+
+        /* Add style for the "New User Sign Up" link */
+        .container a {
+            display: block;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -41,6 +49,7 @@
     <h1>Sign In</h1>
     <button onclick="signInPetParent()">Sign In as Pet Parent</button>
     <button onclick="signInNGO()">Sign In as NGO</button>
+    <a href="sign_up.html">New User Sign Up</a> <!-- New User Sign Up Link -->
 </div>
 
 <script>
@@ -54,6 +63,5 @@
         window.location.href = "sign_in_ngo.html";
     }
 </script>
-
 </body>
 </html>

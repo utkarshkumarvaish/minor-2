@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -33,24 +33,33 @@
             color: #fff;
             cursor: pointer;
         }
+
+        /* Add style for the "Already Registered? Sign In" link */
+        .container a {
+            display: block;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Sign up</h1>
-    <button onclick="signUpPetParent()">Sign up as Pet Parent</button>
-    <button onclick="signUpNGO()">Sign up as NGO</button>
+    <h1>Sign Up</h1>
+    <button onclick="signUpPetParent()">Sign Up as Pet Parent</button>
+    <button onclick="signUpNGO()">Sign Up as NGO</button>
+    <a href="sign_in.html">Already Registered? Sign In</a> <!-- Already Registered? Sign In Link -->
 </div>
 
 <script>
     function signUpPetParent() {
-        // Redirect to sign in page for Pet Parents
+        // Redirect to sign up page for Pet Parents
         window.location.href = "sign_up_pet_parent.html";
     }
 
     function signUpNGO() {
-        // Redirect to sign in page for NGOs
+        // Redirect to sign up page for NGOs
         window.location.href = "sign_up_ngo.html";
     }
 </script>

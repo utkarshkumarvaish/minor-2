@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >Sign In as NGO/Pet centre</title>
+    <title>Sign Up as Pet Parent</title>
     <style>
         body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-image: url('group_pet_photo.jpg'); /* Path to your group pet photo */
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        backdrop-filter: blur(5px); /* Blur the background */
-    }
-
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('group_pet_photo.jpg'); /* Path to your group pet photo */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px); /* Blur the background */
+        }
 
         header {
             text-align: center;
@@ -26,11 +25,11 @@
             color: #333;
         }
 
-         header h1 {
+        header h1 {
             margin-bottom: 10px;
             color: rgba(13, 14, 13, 0.981); /* Change title color to white */
             font-family: 'Times New Roman', Times, serif;
-        } 
+        }
 
         main {
             background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
@@ -45,14 +44,17 @@
 
         label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 5px; /* Reduced margin bottom */
         }
 
         input[type="text"],
-        input[type="password"] {
+        input[type="number"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
             width: 100%;
             padding: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 10px; /* Reduced margin bottom */
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
@@ -73,11 +75,12 @@
 
         footer {
             position: absolute;
-            bottom: 20px;
+            bottom: 10px; /* Adjusted bottom value */
             width: 100%;
             text-align: center;
             color: #333;
         }
+
         img.logo {
             width: 100px; /* Adjust the size as needed */
             border-radius: 250%; /* Make it circular */
@@ -88,20 +91,31 @@
 
 <header>
     <img src="paws_logo.jpg" alt="Paws Connect Logo" class="logo">
-    <h1>Sign In as NGO/Pet centre</h1>
+    <h1>Sign Up as Pet Parent</h1>
 </header>
 
 <main>
-    <form action="login_process.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
+    <form action="signup_process.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+        <input type="password" id="password" name="password" required>
 
-        <button type="submit">Sign In</button>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+
+        <button type="submit">Sign Up</button>
     </form>
-    <a href="sign_up_ngo.html">New User? Sign Up Here</a> <!-- Add a link to sign_up.html -->
 </main>
 
 <footer>
