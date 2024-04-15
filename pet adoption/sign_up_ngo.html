@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In as Pet Parent</title>
+    <title>Sign Up as NGO/Donor</title>
     <style>
         body {
             margin: 0;
@@ -29,12 +29,21 @@
             margin-bottom: 10px;
             color: rgba(13, 14, 13, 0.981); /* Change title color to white */
             font-family: 'Times New Roman', Times, serif;
-        } 
+            margin-left: 50px; /* Adjust the margin to shift the title to the right */
+        }
+
+        .logo {
+            margin-right: 50px; /* Adjust the margin to shift the logo to the right */
+        }
 
         main {
             background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
             padding: 20px;
             border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for card effect */
         }
 
         form {
@@ -44,14 +53,17 @@
 
         label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 5px; /* Reduced margin bottom */
         }
 
         input[type="text"],
-        input[type="password"] {
+        input[type="number"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
             width: 100%;
             padding: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 10px; /* Reduced margin bottom */
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
@@ -72,7 +84,7 @@
 
         footer {
             position: absolute;
-            bottom: 20px;
+            bottom: 10px; /* Adjusted bottom value */
             width: 100%;
             text-align: center;
             color: #333;
@@ -88,24 +100,35 @@
 
 <header>
     <img src="paws_logo.jpg" alt="Paws Connect Logo" class="logo">
-    <h1>Sign In as Pet Parent</h1>
+    <h1>Sign Up as NGO/Donor</h1>
 </header>
 
 <main>
-    <form action="login_process.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
+    <form action="http://localhost:8080/php-practice/signup_process_ngo.php" method="post">
+        <label for="name">Name of NGO:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="ngo_id">NGO/Donor ID:</label>
+        <input type="text" id="ngo_id" name="ngo_id" required>
+
+        <label for="area">Area of NGO:</label>
+        <input type="text" id="area" name="area" required>
+
+        <label for="contact">Contact No.:</label>
+        <input type="text" id="contact" name="contact" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+        <input type="password" id="password" name="password" required>
 
-        <button type="submit">Sign In</button>
+        <button type="submit" name="submit">Sign Up</button>
     </form>
-    <a href="sign_up_pet_parent.html">New User? Sign Up Here</a> <!-- Add a link to sign_up.html -->
 </main>
 
 <footer>
-    <p>&copy; 2024 Paws Connect</p>
+    <p>&copy; 2024 Paws-C</p>
 </footer>
 
 </body>

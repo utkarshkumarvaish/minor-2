@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .mission {
+            background-color: #FFDB58;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+            font-style: italic;
+        }
+
+        .mission h2 {
+            font-weight: bold;
+        }
+
+        .logo {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .meet-animals {
+            text-align: center;
+            margin-top: 10px;
+            color: orange;
+        }
+
+        .puppies-waiting {
+            text-align: center;
+            margin-top: 10px;
+            font-family: 'Cooper Black', sans-serif;
+            font-weight: bold;
+        }
+
+        .pets-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .pet-card {
+            width: 250px;
+            margin: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .pet-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .pet-card .pet-details {
+            display: none;
+            padding: 15px;
+            background-color: #fff;
+        }
+
+        .pet-card .pet-details p {
+            margin: 5px 0;
+        }
+
+        .pet-card button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 80%;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin: 0 10px;
+        }
+
+        /* New Section Styles */
+        .add-pet-section {
+            background-color: #5C85D6;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .add-pet-section button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </header>
+
+    <img src="https://cdn.dribbble.com/users/97870/screenshots/1916644/pup.gif" alt="Cute Puppy" style="width: 100%; display: block; margin: 20px auto;">
+
+    <div class="mission">
+        <h2>OUR MISSION</h2>
+        <p>We want to help you give your pet the very best quality of life. In our opinion, the best way of doing this is to see the world as your pet sees it. We take this approach for everything from food and snacks to toys, bedding, and other accessories. Every item we carry is something we would give to our own pets, with love and care.</p>
+    </div>
+
+    <!-- Logo Section -->
+    <div class="logo">
+    <img src="https://i.pinimg.com/564x/a9/dd/1a/a9dd1a40ae780a3d6407c5ae3b2950b4.jpg" alt="Company Logo">
+</div>
+<div class="meet-animals">
+    <h3>Meet the animals</h3>
+</div>
+<div class="puppies-waiting" style="font-size: 24px; font-style: italic;">
+    <h3>Puppies waiting for you!!!</h3>
+</div>   
+    <div class="pets-container">
+        <!-- Existing Pet Cards -->
+        <div class="pet-card">
+            <img src="https://www.nylabone.com/-/media/project/oneweb/nylabone/images/dog101/activities-fun/10-great-small-dog-breeds/maltese-portrait.jpg" alt="Maltese Dog">
+            <h3>Maltese</h3>
+            <p>Age: 2 years</p>
+            <p>Species: Dog</p>
+            <div class="pet-details">
+                <p>Condition: Healthy</p>
+                <p>Date of Arrival: 01/01/2024</p>
+                <p>Breed: Maltese</p>
+                <p>Area Found: City Park</p>
+            </div>
+            <button onclick="toggleDetails(this)">Details</button>
+        </div>
+
+        <div class="pet-card">
+            <img src="https://cdn.britannica.com/39/233239-050-50C0C3C5/standard-poodle-dog.jpg" alt="Standard Poodle Dog">
+            <h3>Standard Poodle</h3>
+            <p>Age: 3 years</p>
+            <p>Species: Dog</p>
+            <div class="pet-details">
+                <p>Condition: Vaccinated</p>
+                <p>Date of Arrival: 02/01/2024</p>
+                <p>Breed: Poodle</p>
+                <p>Area Found: Residential Area</p>
+            </div>
+            <button onclick="toggleDetails(this)">Details</button>
+        </div>
+
+        <div class="pet-card">
+            <img src="https://cuddleclones.com/cdn/shop/articles/blog-159_600x.jpg?v=1622041196" alt="Siamese Cat">
+            <h3>Siamese Cat</h3>
+            <p>Age: 4 years</p>
+            <p>Species: Cat</p>
+            <div class="pet-details">
+                <p>Condition: Neutered</p>
+                <p>Date of Arrival: 03/01/2024</p>
+                <p>Breed: Siamese</p>
+                <p>Area Found: Downtown</p>
+            </div>
+            <button onclick="toggleDetails(this)">Details</button>
+        </div>
+    </div>
+
+    <div class="carousel-container">
+    
+    <img src="https://mummycat.in/wp-content/uploads/2022/10/Untitled-1-1.jpg" alt="Happy Client" style="width: 100%; display: block; margin: 20px auto;">
+</div>
+
+</div>    
+    <div class="add-pet-section">
+        <button onclick="showAddPetForm()">Add New Pet</button>
+        <div id="add-pet-form" style="display:none;">
+            <h3>Add Pet Details</h3>
+            <form onsubmit="addNewPet(event)">
+                <label for="petName">Pet Name:</label><br>
+                <input type="text" id="petName" name="petName"><br><br>
+
+                <label for="petAge">Pet Age:</label><br>
+                <input type="text" id="petAge" name="petAge"><br><br>
+
+                <label for="petSpecies">Pet Species:</label><br>
+                <input type="text" id="petSpecies" name="petSpecies"><br><br>
+
+                <label for="condition">Condition:</label><br>
+                <input type="text" id="condition" name="condition"><br><br>
+
+                <label for="dateOfArrival">Date of Arrival:</label><br>
+                <input type="text" id="dateOfArrival" name="dateOfArrival"><br><br>
+
+                <label for="breed">Breed:</label><br>
+                <input type="text" id="breed" name="breed"><br><br>
+
+                <label for="areaFound">Area Found:</label><br>
+                <input type="text" id="areaFound" name="areaFound"><br><br>
+
+                <label for="petImage">Upload Image:</label><br>
+                <input type="file" id="petImage" name="petImage"><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails(button) {
+            const details = button.previousElementSibling;
+            details.style.display = details.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function showAddPetForm() {
+            const form = document.getElementById('add-pet-form');
+            if (form.style.display === 'none' || form.style.display === '') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        }
+
+        function addNewPet(event) {
+            event.preventDefault();
+
+            const petName = document.getElementById('petName').value;
+            const petAge = document.getElementById('petAge').value;
+            const petSpecies = document.getElementById('petSpecies').value;
+            const condition = document.getElementById('condition').value;
+            const dateOfArrival = document.getElementById('dateOfArrival').value;
+            const breed = document.getElementById('breed').value;
+            const areaFound = document.getElementById('areaFound').value;
+            const petImage = document.getElementById('petImage').files[0];
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const newPetCard = `
+                <div class="pet-card">
+                    <img src="${e.target.result}" alt="${petName}">
+                    <h3>${petName}</h3>
+                    <p>Age: ${petAge} years</p>
+                    <p>Species: ${petSpecies}</p>
+                    <div class="pet-details">
+                        <p>Condition: ${condition}</p>
+                        <p>Date of Arrival: ${dateOfArrival}</p>
+                        <p>Breed: ${breed}</p>
+                        <p>Area Found: ${areaFound}</p>
+                    </div>
+                    <button onclick="toggleDetails(this)">Details</button>
+                </div>
+                `;
+                const petsContainer = document.querySelector('.pets-container');
+                petsContainer.innerHTML += newPetCard;
+            }
+            reader.readAsDataURL(petImage);
+
+            document.getElementById('petName').value = '';
+            document.getElementById('petAge').value = '';
+            document.getElementById('petSpecies').value = '';
+            document.getElementById('condition').value = '';
+            document.getElementById('dateOfArrival').value = '';
+            document.getElementById('breed').value = '';
+            document.getElementById('areaFound').value = '';
+            document.getElementById('petImage').value = '';
+            document.getElementById('add-pet-form').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

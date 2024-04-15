@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >Sign In as NGO/Pet centre</title>
+    <title>Sign In as NGO/Pet centre</title>
     <style>
         body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-image: url('group_pet_photo.jpg'); /* Path to your group pet photo */
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        backdrop-filter: blur(5px); /* Blur the background */
-    }
-
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('animals.gif'); /* Path to your GIF */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px); /* Blur the background */
+        }
 
         header {
             text-align: center;
@@ -26,11 +25,11 @@
             color: #333;
         }
 
-         header h1 {
+        header h1 {
             margin-bottom: 10px;
             color: rgba(13, 14, 13, 0.981); /* Change title color to white */
             font-family: 'Times New Roman', Times, serif;
-        } 
+        }
 
         main {
             background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
@@ -78,6 +77,7 @@
             text-align: center;
             color: #333;
         }
+
         img.logo {
             width: 100px; /* Adjust the size as needed */
             border-radius: 250%; /* Make it circular */
@@ -92,7 +92,7 @@
 </header>
 
 <main>
-    <form action="login_process.php" method="post">
+    <form action="http://localhost:8080/php-practice/login_process.php" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username">
 

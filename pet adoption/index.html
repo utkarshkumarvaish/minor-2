@@ -3,20 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paws Connect</title>
+    <title>Paws-Connect</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('grouppet.gif'); /* Set the background image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Additional styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        /* Transparent background with blur effect for the "About Us" section */
+        #about {
+            backdrop-filter: blur(5px);
+        }
+
+        /* Transparent background for the "Welcome to Paws Connect" and "Available Pets" sections */
+        #home,
+        #pets {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div class="top-bar">
-            <a href="sign_in.html"><button class="sign-in-btn">Sign In</button></a>
-            <a href="sign_up.html"><button class="sign-up-btn">Sign Up</button></a>
-        </div>
-        <img src="paws_logo.jpg" alt="Paws Connect Logo">
-        <h1>Paws Connect</h1>
-    </header>
-    
+<header>
+    <div class="top-bar">
+        <a href="sign_in.html"><button class="sign-in-btn">Sign In</button></a>
+        <a href="sign_up.html"><button class="sign-up-btn">Sign Up</button></a>
+    </div>
+    <img src="paws_logo.jpg" alt="Paws Connect Logo">
+    <h1>Paws-Connect</h1>
+</header>
 
 <nav>
     <ul>
@@ -28,7 +95,7 @@
 </nav>
 
 <section id="home">
-    <h2>Welcome to Paws Connect</h2>
+    <h2>Welcome to Paws-Connect</h2>
     <p>Find your new furry friend here!</p>
 </section>
 
@@ -38,7 +105,7 @@
 </section>
 
 <section id="pets">
-    <h2>some Available Pets</h2>
+    <h2>Some Available Pets</h2>
     <div class="pet">
         <img src="dog.jpg" alt="Dog">
         <h3>Dog Name</h3>
@@ -62,7 +129,7 @@
 </section>
 
 <footer>
-    <p>&copy; 2024 Paws Connect</p>
+    <p>&copy; 2024 Paws-Connect</p>
 </footer>
 
 </body>

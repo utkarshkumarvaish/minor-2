@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url('group_pet_photo.jpg'); /* Path to your group pet photo */
+            background-image: url('animals.gif'); /* Path to your GIF */
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -95,7 +95,7 @@
 </header>
 
 <main>
-    <form action="signup_process.php" method="post">
+    <form action="http://localhost:8080/php-practice/signup_process.php" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -114,7 +114,7 @@
         <label for="address">Address:</label>
         <textarea id="address" name="address" required></textarea>
 
-        <button type="submit">Sign Up</button>
+        <button type="submit" name="submit">Sign Up</button>
     </form>
 </main>
 
