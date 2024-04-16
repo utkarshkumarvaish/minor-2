@@ -45,8 +45,8 @@
         }
 
         .logo img {
-            width: 200px;
-            height: 200px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
         }
 
@@ -153,19 +153,15 @@
         <a href="http://127.0.0.1:5500/index.html">Home</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a href="http://127.0.0.1:5500/sign_in_ngo.html" style="float: right;">Logout</a>
+        <a href="http://127.0.0.1:5500/sign_in_pet_parent.html" style="float: right;">Logout</a>
     </header>
 
-    <img src="https://purinaexpress.com/donations1.gif" alt="Cute Puppy" style="width: 30%; display: block; margin: 20px auto;">
+    <img src="https://cdn.dribbble.com/users/97870/screenshots/1916644/pup.gif" alt="Cute Puppy" style="width: 100%; display: block; margin: 20px auto;">
 
     <div class="mission" id="about">
         <h2>OUR MISSION</h2>
-        <p>We are committed to finding loving homes for every pet in need. Our goal is to create lasting bonds between pets and their new families, ensuring that every adoption is a perfect match. Through dedication and care, we strive to make a difference, one adoption at a time.</p>
-        <blockquote>
-            "The greatness of a nation and its moral progress can be judged by the way its animals are treated." <br>
-            <span style="display:block; margin-top:10px;"><strong>- Mahatma Gandhi</strong></span>
-        </blockquote>
-    </div>
+        <p>We want to help you give your pet the very best quality of life. In our opinion, the best way of doing this is to see the world as your pet sees it. We take this approach for everything from food and snacks to toys, bedding, and other accessories. Every item we carry is something we would give to our own pets, with love and care.</p>
+    </div>
 
     <!-- Logo Section -->
     <div class="logo">
@@ -174,9 +170,9 @@
 <div class="meet-animals">
     <h3>Meet the animals</h3>
 </div>
-<!-- <div class="puppies-waiting" style="font-size: 24px; font-style: italic;">
-    <h3>Pets are waiting to meet you!!!</h3>
-</div>    -->
+<div class="puppies-waiting" style="font-size: 24px; font-style: italic;">
+    <h3>🐾 Pets are waiting to meet you! 🐾</h3>
+</div>   
     <div class="pets-container">
         <!-- Existing Pet Cards -->
         <div class="pet-card">
@@ -222,51 +218,16 @@
         </div>
     </div>
 
-    <!-- <div class="carousel-container">
+    <div class="carousel-container">
     
     <img src="https://mummycat.in/wp-content/uploads/2022/10/Untitled-1-1.jpg" alt="Happy Client" style="width: 100%; display: block; margin: 20px auto;">
-</div> -->
+</div>
 
-</div>    
-    <div class="add-pet-section">
-        <button onclick="showAddPetForm()">Add New Pet</button>
-        <div id="add-pet-form" style="display:none;">
-            <h3>Add Pet Details</h3>
-            <form onsubmit="addNewPet(event)">
-                <label for="petName">Pet Name:</label><br>
-                <input type="text" id="petName" name="petName"><br><br>
-
-                <label for="petAge">Pet Age:</label><br>
-                <input type="text" id="petAge" name="petAge"><br><br>
-
-                <label for="petSpecies">Pet Species:</label><br>
-                <input type="text" id="petSpecies" name="petSpecies"><br><br>
-
-                <label for="condition">Condition:</label><br>
-                <input type="text" id="condition" name="condition"><br><br>
-
-                <label for="dateOfArrival">Date of Arrival:</label><br>
-                <input type="text" id="dateOfArrival" name="dateOfArrival"><br><br>
-
-                <label for="breed">Breed:</label><br>
-                <input type="text" id="breed" name="breed"><br><br>
-
-                <label for="areaFound">Area Found:</label><br>
-                <input type="text" id="areaFound" name="areaFound"><br><br>
-
-                <label for="petImage">Upload Image:</label><br>
-                <input type="file" id="petImage" name="petImage"><br><br>
-
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    </div>
-
-    <div class="information" id="contact">
-        <h2>Contact Us</h2>
-        <p>Phone: 123-456-7890</p>
-        <p>Email: info@pawsconnect.com</p>
-    </div>
+<div class="information" id="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: 123-456-7890</p>
+    <p>Email: info@pawsconnect.com</p>
+</div>
 
     <script>
         function toggleDetails(button) {
