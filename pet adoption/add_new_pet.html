@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Pet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://img1.wsimg.com/isteam/ip/46a20638-a43a-4edd-95cc-fa98a9d7668c/7757278.png/:/cr=t:0%25,l:12.77%25,w:74.45%25,h:100%25/rs=w:814,h:407,cg:true');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            grid-column: span 2;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="http://localhost:3000/landing_page_ngo2.php"><i class="fas fa-home"></i></a>
+    </header>
+
+    <div class="container">
+        <h2>Add New Pet</h2>
+        <form action="http://localhost:8080/php-practice/insert_pet.php" method="post" enctype="multipart/form-data" onsubmit="disableSubmitButton()">
+            <label for="petName">Name of the pet:</label>
+            <input type="text" id="petName" name="petName" required>
+
+            <label for="species">Species:</label>
+            <select id="species" name="species" required>
+                <option value="Dog">Dog</option>
+                <option value="Cat">Cat</option>
+                <option value="Others">Others</option>
+            </select>
+
+            <label for="areaFound">Area found:</label>
+            <input type="text" id="areaFound" name="areaFound" required>
+
+            <label for="breed">Breed of the pet:</label>
+            <input type="text" id="breed" name="breed" required>
+
+            <label for="dateOfArrival">Date of arrival:</label>
+            <input type="date" id="dateOfArrival" name="dateOfArrival" required>
+
+            <label for="petImage">Pet’s Image:</label>
+            <input type="file" id="petImage" name="petImage" accept="image/*" required>
+
+            <label for="petAge">Pet’s age:</label>
+            <input type="number" id="petAge" name="petAge" required>
+
+            <label for="petCondition">Pet’s Condition:</label>
+            <input type="text" id="petCondition" name="petCondition" required>
+
+            <input type="submit" value="Add Pet" id="submitBtn">
+        </form>
+    </div>
+
+    <script>
+        function disableSubmitButton() {
+            document.getElementById('submitBtn').disabled = true;
+        }
+    </script>
+</body>
+
+</html>

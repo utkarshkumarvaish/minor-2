@@ -176,7 +176,7 @@
 <div class="pets-container">
     <!-- PHP to fetch pet details -->
     <!-- PHP to fetch pet details -->
-    <?php require_once 'fetch_pets.php'; ?>
+    <?php require_once 'fetch_petsparents.php'; ?>
 </div>
 
     <div class="carousel-container">

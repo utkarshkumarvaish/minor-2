@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption History</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://res.cloudinary.com/mycreativeshop/image/upload/f_auto,q_auto/v1706317371/public/po563y5y3w6sjosj1mrt');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .history-card {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .history-card h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .history-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="http://127.0.0.1:5500/landing_page_ngo2.html"><i class="fas fa-home icon"></i> Home</a>
+    </header>
+
+    <div class="container">
+        <div class="pet-parent-info">
+            <h2>Adoption History</h2>
+
+            <!-- Fetch and display accepted adoption requests -->
+            <div class="history-card">
+                <h3><i class="fas fa-check-circle icon"></i> Accepted Requests</h3>
+                <p><i class="fas fa-user icon"></i> Request from John Doe for adopting Bella has been accepted.</p>
+                <p><i class="fas fa-user icon"></i> Request from Jane Smith for adopting Max has been accepted.</p>
+            </div>
+
+            <!-- Fetch and display rejected adoption requests -->
+            <div class="history-card">
+                <h3><i class="fas fa-times-circle icon"></i> Rejected Requests</h3>
+                <p><i class="fas fa-user icon"></i> You rejected the request from John Doe for adopting Bella.</p>
+                <p><i class="fas fa-user icon"></i> You rejected the request from Jane Smith for adopting Max.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

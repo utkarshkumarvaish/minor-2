@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,13 +55,6 @@
             text-align: center;
             margin-top: 10px;
             color: orange;
-        }
-
-        .puppies-waiting {
-            text-align: center;
-            margin-top: 10px;
-            font-family: 'Cooper Black', sans-serif;
-            font-weight: bold;
         }
 
         .pets-container {
@@ -142,7 +134,7 @@
         <a href="#contact">Contact</a>
         <a href="http://127.0.0.1:5500/sign_in_ngo.html" style="float: right;">Logout</a>
         <a href="http://127.0.0.1:5500/add_new_pet.html" style="float: right;"> <i class="fas fa-plus"></i></a>
-        <a href="http://127.0.0.1:5500/view_requests.html" style="float: right;"> <i class="fas fa-bell"></i></a>
+        <a href="http://localhost:3000/history.php" style="float: right;"> <i class="fas fa-bell"></i></a>
     </header>
 
     <img src="https://purinaexpress.com/donations1.gif" alt="Cute Puppy" style="width: 30%; display: block; margin: 20px auto;">
@@ -165,48 +157,9 @@
     </div>
 
     <div class="pets-container">
-        <!-- Existing Pet Cards -->
-        <div class="pet-card">
-            <img src="https://www.nylabone.com/-/media/project/oneweb/nylabone/images/dog101/activities-fun/10-great-small-dog-breeds/maltese-portrait.jpg" alt="Maltese Dog">
-            <h3>Maltese</h3>
-            <p>Age: 2 years</p>
-            <p>Species: Dog</p>
-            <div class="pet-details">
-                <p>Condition: Healthy</p>
-                <p>Date of Arrival: 01/01/2024</p>
-                <p>Breed: Maltese</p>
-                <p>Area Found: City Park</p>
-            </div>
-            <button onclick="toggleDetails(this)">Details</button>
-        </div>
-
-        <div class="pet-card">
-            <img src="https://cdn.britannica.com/39/233239-050-50C0C3C5/standard-poodle-dog.jpg" alt="Standard Poodle Dog">
-            <h3>Standard Poodle</h3>
-            <p>Age: 3 years</p>
-            <p>Species: Dog</p>
-            <div class="pet-details">
-                <p>Condition: Vaccinated</p>
-                <p>Date of Arrival: 02/01/2024</p>
-                <p>Breed: Poodle</p>
-                <p>Area Found: Residential Area</p>
-            </div>
-            <button onclick="toggleDetails(this)">Details</button>
-        </div>
-
-        <div class="pet-card">
-            <img src="https://cuddleclones.com/cdn/shop/articles/blog-159_600x.jpg?v=1622041196" alt="Siamese Cat">
-            <h3>Siamese Cat</h3>
-            <p>Age: 4 years</p>
-            <p>Species: Cat</p>
-            <div class="pet-details">
-                <p>Condition: Neutered</p>
-                <p>Date of Arrival: 03/01/2024</p>
-                <p>Breed: Siamese</p>
-                <p>Area Found: Downtown</p>
-            </div>
-            <button onclick="toggleDetails(this)">Details</button>
-        </div>
+        <!-- PHP to fetch pet details -->
+        <!-- PHP to fetch pet details -->
+        <?php require_once 'fetch_pets.php'; ?>
     </div>
 
     <div class="information" id="contact">

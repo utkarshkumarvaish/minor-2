@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Requests</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://res.cloudinary.com/mycreativeshop/image/upload/f_auto,q_auto/v1706317371/public/po563y5y3w6sjosj1mrt');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .request-card {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .request-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .request-card h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .request-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .request-actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .accept-btn,
+        .reject-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .accept-btn {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        .accept-btn:hover {
+            background-color: #45a049;
+        }
+
+        .reject-btn {
+            background-color: #f44336;
+            color: #fff;
+        }
+
+        .reject-btn:hover {
+            background-color: #db4436;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="http://127.0.0.1:5500/landing_page_ngo2.html"><i class="fas fa-home"></i></a>
+    </header>
+
+    <div class="container">
+        <div class="pet-parent-info">
+            <h2>Adoption Requests</h2>
+            <div class="request-card">
+                <h3><i class="fas fa-user icon"></i> John Doe</h3>
+                <p><strong>Email:</strong> john@example.com</p>
+                <p><strong>Phone:</strong> 123-456-7890</p>
+                <p><strong>Address:</strong> Bidholi</p>
+                <h3><i class="fas fa-paw"></i> Pet Information</h3>
+                <p><strong>Pet Name:</strong> Bella</p>
+                <p><strong>Species:</strong> Dog</p>
+                <p><strong>Age:</strong> 2 years</p>
+                <div class="request-actions">
+                    <button class="accept-btn" onclick="acceptRequest('John Doe', 'Bella')">Accept</button>
+                    <button class="reject-btn" onclick="rejectRequest('John Doe', 'Bella')">Reject</button>
+                </div>
+            </div>
+
+            <div class="request-card">
+                <h3><i class="fas fa-user icon"></i> Jane Smith</h3>
+                <p><strong>Email:</strong> jane@example.com</p>
+                <p><strong>Phone:</strong> 987-654-3210</p>
+                <p><strong>Address:</strong> Pondha</p>
+                <h3><i class="fas fa-paw"></i> Pet Information</h3>
+                <p><strong>Pet Name:</strong> Max</p>
+                <p><strong>Species:</strong> Cat</p>
+                <p><strong>Age:</strong> 3 years</p>
+                <div class="request-actions">
+                    <button class="accept-btn" onclick="acceptRequest('Jane Smith', 'Max')">Accept</button>
+                    <button class="reject-btn" onclick="rejectRequest('Jane Smith', 'Max')">Reject</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function acceptRequest(username, petName) {
+            alert(`Request from ${username} for adopting ${petName} has been accepted.`);
+        }
+
+        function rejectRequest(username, petName) {
+            alert(`You rejected the request from ${username} for adopting ${petName} .`);
+        }
+    </script>
+
+</body>
+
+</html>

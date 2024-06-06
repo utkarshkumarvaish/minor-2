@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Adoption System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -45,8 +46,8 @@
         }
 
         .logo img {
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
         }
 
@@ -54,13 +55,6 @@
             text-align: center;
             margin-top: 10px;
             color: orange;
-        }
-
-        .puppies-waiting {
-            text-align: center;
-            margin-top: 10px;
-            font-family: 'Cooper Black', sans-serif;
-            font-weight: bold;
         }
 
         .pets-container {
@@ -102,29 +96,32 @@
             cursor: pointer;
         }
 
+        /* Carousel Styles */
         .carousel-container {
             text-align: center;
             margin: 20px 0;
         }
 
-        .carousel-img {
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 80%;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel img {
             width: 100%;
-            display: block;
-            margin: 20px auto;
+            height: 200px;
+            object-fit: cover;
+            margin: 0 10px;
         }
 
-        .add-pet-section {
-            background-color: #5C85D6;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .add-pet-section button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            cursor: pointer;
+        /* New Section Styles */
+        .information {
+            background-color: #f4f4f4;
+            color: #000;
         }
     </style>
 </head>
@@ -132,83 +129,49 @@
 <body>
 
     <header>
-        <a href="#home">Home</a>
+        <a href="http://127.0.0.1:5500/index.html">Home </a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+        <a href="http://127.0.0.1:5500/sign_in_ngo.html" style="float: right;">Logout</a>
+        <a href="http://127.0.0.1:5500/add_new_pet.html" style="float: right;"> <i class="fas fa-plus"></i></a>
+        <a href="http://127.0.0.1:5500/view_requests.html" style="float: right;"> <i class="fas fa-bell"></i></a>
     </header>
 
-    <img src="https://cdn.dribbble.com/users/97870/screenshots/1916644/pup.gif" alt="Cute Puppy" class="banner-img">
+    <img src="https://purinaexpress.com/donations1.gif" alt="Cute Puppy" style="width: 30%; display: block; margin: 20px auto;">
 
-    <div class="mission">
+    <div class="mission" id="about">
         <h2>OUR MISSION</h2>
-        <p>We want to help you give your pet the very best quality of life. In our opinion, the best way of doing this is to see the world as your pet sees it. We take this approach for everything from food and snacks to toys, bedding, and other accessories. Every item we carry is something we would give to our own pets, with love and care.</p>
+        <p>We are committed to finding loving homes for every pet in need. Our goal is to create lasting bonds between pets and their new families, ensuring that every adoption is a perfect match. Through dedication and care, we strive to make a difference, one adoption at a time.</p>
+        <blockquote>
+            "The greatness of a nation and its moral progress can be judged by the way its animals are treated." <br>
+            <span style="display:block; margin-top:10px;"><strong>- Mahatma Gandhi</strong></span>
+        </blockquote>
     </div>
 
+    <!-- Logo Section -->
     <div class="logo">
         <img src="https://i.pinimg.com/564x/a9/dd/1a/a9dd1a40ae780a3d6407c5ae3b2950b4.jpg" alt="Company Logo">
     </div>
-
     <div class="meet-animals">
         <h3>Meet the animals</h3>
     </div>
 
-    <div class="puppies-waiting">
-        <h3>Puppies waiting for you!!!</h3>
-    </div>
-
     <div class="pets-container">
-        <!-- Existing Pet Cards -->
-        <!-- Pet cards will be dynamically added here -->
+        <!-- PHP to fetch pet details -->
+        <!-- PHP to fetch pet details -->
+        <?php require_once 'C:\xampp\htdocs\php-practice\fetch_pets.php'; ?>
     </div>
 
-    <div class="carousel-container">
-        <img src="https://mummycat.in/wp-content/uploads/2022/10/Untitled-1-1.jpg" alt="Happy Client" class="carousel-img">
-    </div>
-
-    <div class="add-pet-section">
-        <form id="petForm" action="http://localhost:8080/add_pet.php" method="post" enctype="multipart/form-data">
-            <h3>Add Pet Details</h3>
-            <label for="petName">Pet Name:</label><br>
-            <input type="text" id="petName" name="petName"><br><br>
-
-            <label for="petAge">Pet Age:</label><br>
-            <input type="text" id="petAge" name="petAge"><br><br>
-
-            <label for="petSpecies">Pet Species:</label><br>
-            <input type="text" id="petSpecies" name="petSpecies"><br><br>
-
-            <label for="condition">Condition:</label><br>
-            <input type="text" id="condition" name="condition"><br><br>
-
-            <label for="dateOfArrival">Date of Arrival:</label><br>
-            <input type="date" id="dateOfArrival" name="dateOfArrival"><br><br>
-
-            <label for="breed">Breed:</label><br>
-            <input type="text" id="breed" name="breed"><br><br>
-
-            <label for="areaFound">Area Found:</label><br>
-            <input type="text" id="areaFound" name="areaFound"><br><br>
-
-            <label for="petImage">Upload Image:</label><br>
-            <input type="file" id="petImage" name="petImage"><br><br>
-
-            <input type="submit" value="Submit">
-        </form>
+    <div class="information" id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: 123-456-7890</p>
+        <p>Email: info@pawsconnect.com</p>
     </div>
 
     <script>
         function toggleDetails(button) {
             const details = button.previousElementSibling;
             details.style.display = details.style.display === 'none' ? 'block' : 'none';
-        }
-
-        function showAddPetForm() {
-            const form = document.getElementById('add-pet-form');
-            if (form.style.display === 'none' || form.style.display === '') {
-                form.style.display = 'block';
-            } else {
-                form.style.display = 'none';
-            }
         }
     </script>
 
